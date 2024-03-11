@@ -12,21 +12,35 @@ class SonyBraviaAndroidTvDriver extends Homey.Driver {
       if (view === 'discover') {
         this.log("showView:discover" );
         devices = await this.fetchAvailableDevices(session);
-        await session.showView('list_devices');
+        if (devices.length < 1) {
+          await session.showView('not_found');
+        }
+        else{
+          await session.showView('list_devices');
+        }
       }
     });
     // session.setHandler('list_devices', async () => await this.fetchAvailableDevices(session));
     session.setHandler('list_devices', async () => { return devices; });
-    session.setHandler('manual_input', async (data) => await this.fetchDeviceDetails(data));
-    session.setHandler('preshared_key', async (device) => await this.fetchExpandedDeviceDetails(device));
+    session.setHandler('manual_input', async (data) => await this.fetchDeviceDetails(session, data));
+    session.setHandler('preshared_key', async (device) => await this.fetchExpandedDeviceDetails(session, device));
   }
 
-  async fetchExpandedDeviceDetails(device) {
+  async fetchExpandedDeviceDetails(session, device) {
     try {
       const extendedDevice =
         await this._sonyBraviaAndroidTvFinder.fetchExtendDeviceDetails(device);
 
       this.log('Got extended Sony BRAVIA Android TV data: ', extendedDevice);
+
+      // Check if already added
+      let existingDevices = this.getDevices();
+      // Filter existin devices by ID
+      if (existingDevices.filter(e => (e.getData().id === extendedDevice.data.id || e.getData().cid === extendedDevice.data.cid)).length > 0){
+        this.log('Device already added: ', extendedDevice.data.cid);
+        // session.showView('already_added');
+        return undefined;
+      }
 
       return extendedDevice;
     } catch (err) {
@@ -37,7 +51,7 @@ class SonyBraviaAndroidTvDriver extends Homey.Driver {
     // return null;
   }
 
-  async fetchDeviceDetails(data) {
+  async fetchDeviceDetails(session, data) {
     let device = this._sonyBraviaAndroidTvFinder.populateDeviceData(
       data.name,
       null,
@@ -73,7 +87,7 @@ class SonyBraviaAndroidTvDriver extends Homey.Driver {
     let existingDevices = this.getDevices();
     for (let i=0; i<foundDevices.length; i++){
       // Filter existin devices by ID
-      if (existingDevices.filter(e => e.getData().id === foundDevices[i].data.id).length <= 0){
+      if (existingDevices.filter(e => (e.getData().id === foundDevices[i].data.id || e.getData().cid === foundDevices[i].data.cid)).length <= 0){
         // Filter aldready added devices in case of HP23 and two active LAN ports (Wifi+LAN)
         if (devices.filter(e => e.data.id === foundDevices[i].data.id).length <= 0){
               devices.push(foundDevices[i]);
@@ -81,7 +95,7 @@ class SonyBraviaAndroidTvDriver extends Homey.Driver {
       }
     }
 
-    this.log('Filtered devices (prevent duplicated devices)\'s: ', foundDevices);
+    this.log('Filtered devices (prevent duplicated devices)\'s: ', devices);
 
     return devices;
   }

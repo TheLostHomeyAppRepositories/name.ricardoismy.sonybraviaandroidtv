@@ -9,16 +9,16 @@ class SonyBraviaAndroidTvApp extends Homey.App {
 
     async onInit() {
 
-        if (process.env.DEBUG === '1'){
-			if (this.homey.platform == "local"){
-				try{ 
-					require('inspector').waitForDebugger();
-				}
-				catch(error){
-					require('inspector').open(9229, '0.0.0.0', true);
-				}
-			}
-		}
+      if (process.env.DEBUG === '1'){
+        if (this.homey.platform == "local"){
+          try{ 
+            require('inspector').waitForDebugger();
+          }
+          catch(error){
+            require('inspector').open(9229, '0.0.0.0', true);
+          }
+        }
+      }
 
         this.log('SonyBraviaAndroidTvApp is running...');
         await this.registerFlowListeners();

@@ -54,15 +54,20 @@
           Homey.hideLoadingOverlay();
           return Homey.alert(Homey.__("errors.preshared_key"));
         }
-
-        try{
-          await Homey.createDevice(device);
-          Homey.hideLoadingOverlay();
-          Homey.done();
+        if (device != undefined){
+          try{
+            await Homey.createDevice(device);
+            Homey.hideLoadingOverlay();
+            Homey.done();
+          }
+          catch(err){
+            Homey.hideLoadingOverlay();
+            return Homey.alert(err.message);
+          }
         }
-        catch(err){
+        else{
           Homey.hideLoadingOverlay();
-          return Homey.alert(err.message);
+          Homey.showView('already_added');
         }
       });
     }

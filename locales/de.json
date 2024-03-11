@@ -14,6 +14,9 @@
       "instructions": "Anleitung anzeigen"
     }
   },
+  "already_added": {
+    "title": "Das ausgewählte Gerät wurde bereits hinzugefügt."
+  },
   "manual_input": {
     "title": "Sony BRAVIA Android TV manuell hinzufügen",
     "intro": "<i>Das manuelle Hinzufügen des TVs erlaubt das Fortsetzen des Prozesses für erfahrene Benutzer, wenn die automatische Erkennung nicht möglich ist.</i>",

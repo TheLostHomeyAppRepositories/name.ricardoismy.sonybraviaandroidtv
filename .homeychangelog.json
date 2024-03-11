@@ -82,5 +82,9 @@
   "2.0.18": {
     "en": "Error handling in device discovery.",
     "de": "Fehlerbehandlung in Geräte-Suche."
+  },
+  "2.0.19": {
+    "en": "Improved pair view, check for already devices.",
+    "de": "Pair-Dialog erweitert, Prüfung auf bereits hinzugefügte Geräte."
   }
 }

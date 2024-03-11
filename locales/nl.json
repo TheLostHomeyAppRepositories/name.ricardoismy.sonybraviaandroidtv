@@ -14,6 +14,9 @@
       "instructions": "Bekijk instructies"
     }
   },
+  "already_added": {
+    "title": "Het geselecteerde apparaat is al toegevoegd."
+  },
   "manual_input": {
     "title": "Handmatig Sony BRAVIA Android TV toevoegen",
     "intro": "<i>Het handmatig toevoegen van de televisie is alleen bedoeld voor ervaren gebruiken. Voor een makkelijke installatie ervaring kun je beter de autmatische modus gebruiken.</i>",

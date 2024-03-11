@@ -14,6 +14,9 @@
       "instructions": "View instructions"
     }
   },
+  "already_added": {
+    "title": "Selected device was already added."
+  },
   "manual_input": {
     "title": "Manually add Sony BRAVIA Android TV",
     "intro": "<i>Adding the television manually is only for advanced users. For an easier set-up experience please use the default automatic mode.</i>",

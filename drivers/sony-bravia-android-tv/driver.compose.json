@@ -27,7 +27,7 @@
       "options": {
           "text": {
             "en": "Searching for devices...",
-            "de": "Suche nach Geräte..."
+            "de": "Suche nach Geräten..."
           }
       },
       "navigation": {
@@ -51,6 +51,12 @@
       "id": "instructions"
     },
     {
+      "id": "already_added",
+      "navigation": {
+        "next": "done"
+      }
+    },
+    {
       "id": "not_found",
       "navigation": {
         "next": "discover"
@@ -62,6 +68,10 @@
     {
       "id": "add_devices",
       "template": "add_devices"
+    },
+    {
+      "id": "done",
+      "template": "done"
     }
   ]
 }
