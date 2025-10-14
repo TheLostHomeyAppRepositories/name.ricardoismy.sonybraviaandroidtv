@@ -90,5 +90,9 @@
   "2.0.20": {
     "en": "Fixed mute state.",
     "de": "Stummschaltung korrigiert."
+  },
+  "2.0.21": {
+    "en": "Fix for manual pair.",
+    "de": "Korrektur für manuelles Hinzufügen."
   }
 }

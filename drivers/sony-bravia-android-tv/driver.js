@@ -36,7 +36,10 @@ class SonyBraviaAndroidTvDriver extends Homey.Driver {
       // Check if already added
       let existingDevices = this.getDevices();
       // Filter existin devices by ID
-      if (existingDevices.filter(e => (e.getData().id === extendedDevice.data.id || e.getData().cid === extendedDevice.data.cid)).length > 0){
+      if (existingDevices.filter(e => ( 
+          ( extendedDevice.data.id != '' && e.getData().id === extendedDevice.data.id ) || 
+          ( extendedDevice.data.cid != '' && e.getData().cid === extendedDevice.data.cid )
+        ).length > 0 ) ){
         this.log('Device already added: ', extendedDevice.data.cid);
         // session.showView('already_added');
         return undefined;
