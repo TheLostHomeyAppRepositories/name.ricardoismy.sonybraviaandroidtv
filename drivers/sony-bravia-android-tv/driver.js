@@ -8,6 +8,7 @@ class SonyBraviaAndroidTvDriver extends Homey.Driver {
 
   onPair(session) {
     let devices = [];
+    let scanLog = [];
     session.setHandler('showView', async (view) => {
       if (view === 'discover') {
         this.log("showView:discover" );
@@ -19,11 +20,24 @@ class SonyBraviaAndroidTvDriver extends Homey.Driver {
           await session.showView('list_devices');
         }
       }
+      if (view === 'scan') {
+        this.log("showView:scan" );
+        scanLog = await this.discoverSSDP(session);
+        if (scanLog.length < 1) {
+          await session.showView('not_found');
+        }
+        else{
+          await session.showView('scan_log');
+        }
+      }
     });
     // session.setHandler('list_devices', async () => await this.fetchAvailableDevices(session));
     session.setHandler('list_devices', async () => { return devices; });
     session.setHandler('manual_input', async (data) => await this.fetchDeviceDetails(session, data));
     session.setHandler('preshared_key', async (device) => await this.fetchExpandedDeviceDetails(session, device));
+    session.setHandler('get_log', async () => { 
+      return scanLog 
+    });
   }
 
   async fetchExpandedDeviceDetails(session, device) {
@@ -102,6 +116,11 @@ class SonyBraviaAndroidTvDriver extends Homey.Driver {
     this.log('Filtered devices (prevent duplicated devices)\'s: ', devices);
 
     return devices;
+  }
+
+  async discoverSSDP(session) {
+    let scanLog = await this._sonyBraviaAndroidTvFinder.discoverSSDP();
+    return scanLog;
   }
 }
 

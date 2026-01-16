@@ -11,8 +11,12 @@
     "intro": "<i>Er zijn geen Sony BRAVIA Android TV's gevonden. Controleer of de televisie <b>Aan staat</b> en probeer het nog eens. Je kunt er ook voor kiezen om de televisie handmatig toe te voegen, alleen aangeraden voor ervaren gebruikers.</i>",
     "buttons": {
       "manual_input": "Handmatig invoeren",
-      "instructions": "Bekijk instructies"
+      "instructions": "Bekijk instructies",
+      "scan": "Zoeklogboek"
     }
+  },
+  "scan_log": {
+    "title": "Apparaat gevonden."
   },
   "already_added": {
     "title": "Het geselecteerde apparaat is al toegevoegd."

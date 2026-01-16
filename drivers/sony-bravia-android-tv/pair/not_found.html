@@ -9,6 +9,9 @@
     <br>
     <button class="homey-button-secondary-shadow-full" type="button"
       onclick="sonyBraviaAndroidTvNotFound.onClickInstructions()" data-i18n="not_found.buttons.instructions"></button>
+    <br>
+    <button class="homey-button-secondary-shadow-full" type="button"
+      onclick="sonyBraviaAndroidTvNotFound.onClickScan()" data-i18n="not_found.buttons.scan"></button>
   </div>
 </main>
 
@@ -26,6 +29,10 @@
       Homey.setViewStoreValue('instructions', 'previous_view', 'manual_input', (err) => {
         Homey.showView('instructions');
       });
+    }
+
+    onClickScan(e) {
+      Homey.showView('scan');
     }
   }
 

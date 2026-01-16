@@ -63,6 +63,19 @@
       }
     },
     {
+      "id": "scan",
+      "template": "loading",
+      "navigation": {
+        "next": "scan_log"
+      }
+    },
+    {
+      "id": "scan_log",
+      "navigation": {
+        "prev": "not_found"
+      }
+    },
+    {
       "id": "manual_input"
     },
     {

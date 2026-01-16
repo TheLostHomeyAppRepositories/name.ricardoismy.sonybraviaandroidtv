@@ -1,0 +1,32 @@
+<style>
+    .preScanLog {
+        font-size: 12px;
+        color: inherit;
+        border: initial;
+        padding: initial;
+        font-family: inherit;
+        line-height: 1.3;
+        user-select: text;
+        max-height: 100%;
+        overflow: auto;
+    }
+    .fieldset{
+        border: none;
+    }
+</style>
+<script type="application/javascript">
+
+    Homey.setTitle(Homey.__("scan_log.title"));
+    
+</script>
+
+<pre class="preScanLog" id="scanLog"></pre>
+
+<script type="application/javascript">
+    Homey.emit('get_log').then(function (log) {
+        console.log(log);
+        let string = JSON.stringify(log, null, "  ");
+        document.getElementById('scanLog').textContent = string;
+    });
+
+</script>

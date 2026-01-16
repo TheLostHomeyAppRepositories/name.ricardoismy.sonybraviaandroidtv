@@ -11,8 +11,12 @@
     "intro": "<i>Es wurden keine Sony BRAVIA Android TVs gefudnden. Stelle sicher, dass der <b>TV angeschaltet</b> ist und versuche es erneut. Der TV kann auch manuell durch Eingane der IP-Adresse hinzufügt werden.</i>",
     "buttons": {
       "manual_input": "Manuelle Eingabe",
-      "instructions": "Anleitung anzeigen"
+      "instructions": "Anleitung anzeigen",
+      "scan": "Suchprotokoll"
     }
+  },
+  "scan_log": {
+    "title": "Gefundene Geräte."
   },
   "already_added": {
     "title": "Das ausgewählte Gerät wurde bereits hinzugefügt."
