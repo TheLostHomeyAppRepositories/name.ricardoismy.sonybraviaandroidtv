@@ -455,7 +455,6 @@ class SonyBraviaAndroidTvDevice extends Homey.Device {
     //     }
     //   );
     // }
-
     let inputs = await SonyBraviaAndroidTvCommunicator.getInputs(this, source);
     for (let i=0; i<inputs.length; i++){
       result.push(
@@ -498,6 +497,33 @@ class SonyBraviaAndroidTvDevice extends Homey.Device {
     });
     return result;
   }
+
+  async getAutocompleteQualitySettingsList(type){
+    let result = [];
+    let list = await SonyBraviaAndroidTvCommunicator.getPictureQualitySettings(this, type);
+    for (let i=0; i<list.length; i++){
+      if (list[i].target == type){
+        for (let j=0; j<list[i].candidate.length; j++){
+          result.push(
+            {
+              name: list[i].candidate[j].value,
+              id: list[i].candidate[j].value
+            }
+          );
+        }
+      }
+    }
+    result.sort(function(a, b){
+      if (a.name < b.name){ 
+        return -1
+      }
+      else{
+        return 1;
+      }
+    });
+    return result;
+  }
+
 
   async screenOff(_value){
     try{

@@ -1,0 +1,33 @@
+{
+    "title": { 
+        "en": "Select picture mode",
+        "de": "Wähle Bildmodus",
+        "nl": "Selecteer beeldmodus"
+    },
+    "titleFormatted": { 
+        "en": "Select picture mode [[mode]]",
+        "de": "Wähle Bildmodus [[mode]]",
+        "nl": "Selecteer beeldmodus [[mode]]"
+    },
+    "args": [
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-android-tv"
+        },
+        {
+            "type": "autocomplete",
+            "name": "mode",
+            "title": { 
+                "en": "Picture mode",
+                "de": "Bildmodus",
+                "nl": "Beeldmodus"
+            },
+            "placeholder": { 
+                "en": "Select a picture mode",
+                "de": "Wähle einen Bildmodus",
+                "nl": "Selecteer een beeldmodus"
+            }
+        }
+    ]
+}

@@ -192,6 +192,25 @@ class SonyBraviaAndroidTvApp extends Homey.App {
           }
         });
 
+        this._flowActionSelectPictureMode = this.homey.flow.getActionCard('picture_mode_select')
+        this._flowActionSelectPictureMode.registerRunListener(async (args, state) => {
+          try{
+            await SonyBraviaAndroidTvCommunicator.setPictureQualitySettings(args.device, 'pictureMode', args.mode.id );
+            await args.device.checkDevice();
+            return true;
+          }
+          catch(error){
+            this.error("Error executing flowAction 'pictutre_mode_select': "+  error.message);
+            throw new Error(error.message);
+          }
+        });
+        this._flowActionSelectPictureMode.registerArgumentAutocompleteListener('mode', async (query, args) => {
+          this._autocompletePictureModeList = await args.device.getAutocompleteQualitySettingsList('pictureMode');
+          return this._autocompletePictureModeList.filter((result) => { 
+              return result.name.toLowerCase().includes(query.toLowerCase());
+          });
+        });
+
         // APP FLOW ACTIONS =========================================================================================
         this._flowActionWakeOnLan = this.homey.flow.getActionCard('wake_on_lan');
         // wakeOnLanAction.registerRunListener(async (args, state) => {

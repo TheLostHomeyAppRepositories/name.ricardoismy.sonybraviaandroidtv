@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "name.ricardoismy.sonybraviaandroidtv",
-  "version": "2.0.23",
+  "version": "2.1.0",
   "compatibility": ">=8.1.0",
   "sdk": 3,
   "name": {
@@ -636,6 +636,40 @@
           }
         ],
         "id": "Options"
+      },
+      {
+        "title": {
+          "en": "Select picture mode",
+          "de": "Wähle Bildmodus",
+          "nl": "Selecteer beeldmodus"
+        },
+        "titleFormatted": {
+          "en": "Select picture mode [[mode]]",
+          "de": "Wähle Bildmodus [[mode]]",
+          "nl": "Selecteer beeldmodus [[mode]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-android-tv"
+          },
+          {
+            "type": "autocomplete",
+            "name": "mode",
+            "title": {
+              "en": "Picture mode",
+              "de": "Bildmodus",
+              "nl": "Beeldmodus"
+            },
+            "placeholder": {
+              "en": "Select a picture mode",
+              "de": "Wähle einen Bildmodus",
+              "nl": "Selecteer een beeldmodus"
+            }
+          }
+        ],
+        "id": "picture_mode_select"
       },
       {
         "title": {
