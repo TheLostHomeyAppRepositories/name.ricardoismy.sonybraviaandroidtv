@@ -106,5 +106,9 @@
   "2.1.0": {
     "en": "Added picture mode flow action.",
     "de": "Bildmodus Flow-Aktion ergänzt."
+  },
+  "2.2.0": {
+    "en": "Added optional https connection.",
+    "de": "Optionale https-Verbindung ergänzt."
   }
 }

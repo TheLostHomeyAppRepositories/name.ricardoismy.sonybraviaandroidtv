@@ -56,7 +56,7 @@ class SonyBraviaAndroidTvDriver extends Homey.Driver {
         )); 
       if (filteredDevices.length > 0 ){
         this.log('Device already added: ', extendedDevice.data.cid);
-        // session.showView('already_added');
+        session.showView('already_added');
         return undefined;
       }
 
@@ -113,7 +113,7 @@ class SonyBraviaAndroidTvDriver extends Homey.Driver {
       }
     }
 
-    this.log('Filtered devices (prevent duplicated devices)\'s: ', devices);
+    this.log('Filtered devices (prevent duplicated devices): ', devices);
 
     return devices;
   }

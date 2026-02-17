@@ -18,6 +18,16 @@
           "value": "0.0.0.0"
         },
         {
+          "id": "https",
+          "type": "checkbox",
+          "label": {
+            "en": "Use https connection",
+            "de": "https Verbindung verwenden",
+            "nl": "Gebruik https verbinding"
+          },
+          "value": false
+        },
+        {
           "id": "psk",
           "type": "password",
           "label": {
