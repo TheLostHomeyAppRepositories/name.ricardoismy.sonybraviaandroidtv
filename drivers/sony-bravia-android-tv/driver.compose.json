@@ -57,10 +57,7 @@
       }
     },
     {
-      "id": "not_found",
-      "navigation": {
-        "next": "discover"
-      }
+      "id": "not_found"
     },
     {
       "id": "scan",
