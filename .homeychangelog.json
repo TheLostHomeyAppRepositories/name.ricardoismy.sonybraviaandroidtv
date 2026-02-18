@@ -114,5 +114,9 @@
   "2.2.1": {
     "en": "Fix for pair view.",
     "de": "Korrektur für Pair-Dialog."
+  },
+  "2.2.2": {
+    "en": "Pair adaptation for new TVs.",
+    "de": "Pair-Adaptation für neue TV."
   }
 }
