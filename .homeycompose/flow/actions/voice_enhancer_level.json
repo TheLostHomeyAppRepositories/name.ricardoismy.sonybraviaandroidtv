@@ -1,0 +1,27 @@
+{
+    "title": {
+        "en": "Set voice enhancer level to [[level]].",
+        "de": "Voice-Enhancer-Pegel einstellen.",
+        "nl": "Voice-enhancer-niveau instellen."
+    },
+    "titleFormatted": {
+        "en": "Set voice enhancer level to [[level]].",
+        "de": "Voice-Enhancer-Pegel auf [[level]] einstellen.",
+        "nl": "Voice-enhancer-niveau instellen op [[level]]."
+    },
+    "args": [
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+        },
+        {
+            "name": "level",
+            "type": "range",
+            "min": -6,
+            "max": 6,
+            "step": 1,
+            "labelDecimals": 0
+        }
+    ]
+}

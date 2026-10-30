@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "name.ricardoismy.sonybraviaandroidtv",
-  "version": "2.2.3",
+  "version": "3.0.0",
   "compatibility": ">=8.1.0",
   "sdk": 3,
   "name": {
@@ -55,6 +55,87 @@
     "triggers": [
       {
         "title": {
+          "en": "Bass level changed",
+          "de": "Basspegel geändert",
+          "nl": "Basniveau veranderd"
+        },
+        "tokens": [
+          {
+            "name": "bass_level",
+            "type": "number",
+            "title": {
+              "en": "Bass level",
+              "de": "Basspegel",
+              "nl": "Basniveau"
+            },
+            "example": 5
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "bass_level_changed"
+      },
+      {
+        "title": {
+          "en": "Dynamic Range Compressor changed",
+          "de": "Dynamikbereichskompressor geändert",
+          "nl": "Dynamisch bereik compressor veranderd"
+        },
+        "tokens": [
+          {
+            "name": "drc",
+            "type": "string",
+            "title": {
+              "en": "Dynamic Range Compressor",
+              "de": "Dynamikbereichskompressor",
+              "nl": "Dynamisch bereik compressor"
+            },
+            "example": "on"
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "drc_changed"
+      },
+      {
+        "title": {
+          "en": "Input changed",
+          "de": "Eingang geändert",
+          "nl": "Invoer veranderd"
+        },
+        "tokens": [
+          {
+            "name": "input_theatre",
+            "type": "string",
+            "title": {
+              "en": "Input",
+              "de": "Eingang",
+              "nl": "Invoer"
+            },
+            "example": "tv"
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "input__theatre_changed"
+      },
+      {
+        "title": {
           "en": "Input changed",
           "de": "Eingang geändert",
           "nl": "Invoer veranderd"
@@ -89,6 +170,36 @@
           }
         ],
         "id": "input_changed"
+      },
+      {
+        "title": {
+          "en": "Night mode disabled",
+          "de": "Nachtmodus deaktiviert",
+          "nl": "Nachtmodus uitgeschakeld"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "night_mode_false"
+      },
+      {
+        "title": {
+          "en": "Night mode enabled",
+          "de": "Nachtmodus aktiviert",
+          "nl": "Nachtmodus ingeschakeld"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "night_mode_true"
       },
       {
         "title": {
@@ -185,6 +296,90 @@
           }
         ],
         "id": "playing_content_changed"
+      },
+      {
+        "title": {
+          "en": "Rear level changed",
+          "de": "Rear level geändert",
+          "nl": "Achterniveau veranderd"
+        },
+        "tokens": [
+          {
+            "name": "rear_level",
+            "type": "number",
+            "title": {
+              "en": "Rear level",
+              "de": "Rear level",
+              "nl": "Achterniveau"
+            },
+            "example": 5
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "rear_level_changed"
+      },
+      {
+        "title": {
+          "en": "Sound field disabled",
+          "de": "Klangfeld deaktiviert",
+          "nl": "Geluidsveld uitgeschakeld"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "sound_field_false"
+      },
+      {
+        "title": {
+          "en": "Sound field enabled",
+          "de": "Klangfeld aktiviert",
+          "nl": "Geluidsveld ingeschakeld"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "sound_field_true"
+      },
+      {
+        "title": {
+          "en": "Voice enhancer changed",
+          "de": "Sprachverstärker geändert",
+          "nl": "Spraakversterker veranderd"
+        },
+        "tokens": [
+          {
+            "name": "voice_enhancer",
+            "type": "number",
+            "title": {
+              "en": "Voice enhancer",
+              "de": "Sprachverstärker",
+              "nl": "Spraakversterker"
+            },
+            "example": 5
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "voice_enhancer_changed"
       },
       {
         "title": {
@@ -383,6 +578,62 @@
       },
       {
         "title": {
+          "en": "Input !{{is|isn't}}",
+          "de": "Eingang !{{ist|ist nicht}}",
+          "nl": "Invoer !{{is|is niet}}"
+        },
+        "titleFormatted": {
+          "en": "Input !{{is|isn't}} [[input_theatre]]",
+          "de": "Eingang !{{ist|ist nicht}} [[input_theatre]]",
+          "nl": "Invoer !{{is|is niet}} [[input_theatre]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          },
+          {
+            "name": "input_theatre",
+            "type": "dropdown",
+            "title": {
+              "en": "Input",
+              "de": "Eingang",
+              "nl": "Invoer"
+            },
+            "placeholder": {
+              "en": "Select the input",
+              "de": "Wähle den Eingang",
+              "nl": "Selecteer de invoer"
+            },
+            "values": [
+              {
+                "id": "tv",
+                "title": "TV"
+              },
+              {
+                "id": "bluetooth",
+                "title": "Bluetooth"
+              },
+              {
+                "id": "hdmi1",
+                "title": "HDMI 1"
+              },
+              {
+                "id": "spotify",
+                "title": "Spotify"
+              },
+              {
+                "id": "airplay2",
+                "title": "AirPlay 2"
+              }
+            ]
+          }
+        ],
+        "id": "input_theatre"
+      },
+      {
+        "title": {
           "en": "Screen !{{is off|is on}}",
           "de": "Bildschirm !{{ist aus|ist an}}",
           "nl": "Scherm staat !{{aan|uit}}"
@@ -491,6 +742,34 @@
         "id": "audio_output"
       },
       {
+        "title": {
+          "en": "Set bass level.",
+          "de": "Basspegel einstellen.",
+          "nl": "Basniveau instellen."
+        },
+        "titleFormatted": {
+          "en": "Set bass level to [[level]].",
+          "de": "Basspegel auf [[level]] einstellen.",
+          "nl": "Basniveau instellen op [[level]]."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          },
+          {
+            "name": "level",
+            "type": "range",
+            "min": -10,
+            "max": 10,
+            "step": 1,
+            "labelDecimals": 0
+          }
+        ],
+        "id": "bass_level"
+      },
+      {
         "deprecated": true,
         "title": {
           "en": "Send Enter command",
@@ -563,6 +842,57 @@
       },
       {
         "title": {
+          "en": "Select input",
+          "de": "Wähle Eingang",
+          "nl": "Selecteer invoer"
+        },
+        "titleFormatted": {
+          "en": "Select input [[input_theatre]]",
+          "de": "Wähle den Eingang [[input_theatre]]",
+          "nl": "Selecteer invoer [[input_theatre]]"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          },
+          {
+            "type": "dropdown",
+            "name": "input_theatre",
+            "title": {
+              "en": "Input",
+              "de": "Eingang",
+              "nl": "Invoer"
+            },
+            "values": [
+              {
+                "id": "tv",
+                "title": "TV"
+              },
+              {
+                "id": "bluetooth",
+                "title": "Bluetooth"
+              },
+              {
+                "id": "hdmi1",
+                "title": "HDMI 1"
+              },
+              {
+                "id": "spotify",
+                "title": "Spotify"
+              },
+              {
+                "id": "airplay2",
+                "title": "AirPlay 2"
+              }
+            ]
+          }
+        ],
+        "id": "input_theatre_select"
+      },
+      {
+        "title": {
           "en": "Send remote control command",
           "de": "Sende Remote-Control-Kommande",
           "nl": "Stuur commando afstandsbediening"
@@ -615,6 +945,46 @@
           }
         ],
         "id": "Netflix"
+      },
+      {
+        "title": {
+          "en": "Night mode off.",
+          "de": "Nachtmodus aus.",
+          "nl": "Nachtmodus uit."
+        },
+        "titleFormatted": {
+          "en": "Night mode off.",
+          "de": "Nachtmodus aus",
+          "nl": "Nachtmodus uit"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "night_mode_off"
+      },
+      {
+        "title": {
+          "en": "Night mode on.",
+          "de": "Nachtmodus an.",
+          "nl": "Nachtmodus aan."
+        },
+        "titleFormatted": {
+          "en": "Night mode on.",
+          "de": "Nachtmodus an",
+          "nl": "Nachtmodus aan"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "night_mode_on"
       },
       {
         "deprecated": true,
@@ -670,6 +1040,34 @@
           }
         ],
         "id": "picture_mode_select"
+      },
+      {
+        "title": {
+          "en": "Set rear level.",
+          "de": "Rear-Pegel einstellen.",
+          "nl": "Achterniveau instellen."
+        },
+        "titleFormatted": {
+          "en": "Set rear level to [[level]].",
+          "de": "Rear-Pegel auf [[level]] einstellen.",
+          "nl": "Achterniveau instellen op [[level]]."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          },
+          {
+            "name": "level",
+            "type": "range",
+            "min": -10,
+            "max": 10,
+            "step": 1,
+            "labelDecimals": 0
+          }
+        ],
+        "id": "rear_level"
       },
       {
         "title": {
@@ -859,6 +1257,46 @@
       },
       {
         "title": {
+          "en": "Sound field off.",
+          "de": "Klangfeld aus.",
+          "nl": "Geluidsveld uit."
+        },
+        "titleFormatted": {
+          "en": "Sound field off.",
+          "de": "Klangfeld aus",
+          "nl": "Geluidsveld uit"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "sound_field_off"
+      },
+      {
+        "title": {
+          "en": "Sound field on.",
+          "de": "Klangfeld an.",
+          "nl": "Geluidsveld aan."
+        },
+        "titleFormatted": {
+          "en": "Sound field on.",
+          "de": "Klangfeld an",
+          "nl": "Geluidsveld aan"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          }
+        ],
+        "id": "sound_field_on"
+      },
+      {
+        "title": {
           "en": "Select TV channel",
           "de": "Wähle TV-Kanal",
           "nl": "Selecteer TV-zender"
@@ -904,6 +1342,34 @@
           }
         ],
         "id": "tv_channel_select"
+      },
+      {
+        "title": {
+          "en": "Set voice enhancer level to [[level]].",
+          "de": "Voice-Enhancer-Pegel einstellen.",
+          "nl": "Voice-enhancer-niveau instellen."
+        },
+        "titleFormatted": {
+          "en": "Set voice enhancer level to [[level]].",
+          "de": "Voice-Enhancer-Pegel auf [[level]] einstellen.",
+          "nl": "Voice-enhancer-niveau instellen op [[level]]."
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+          },
+          {
+            "name": "level",
+            "type": "range",
+            "min": -6,
+            "max": 6,
+            "step": 1,
+            "labelDecimals": 0
+          }
+        ],
+        "id": "voice_enhancer_level"
       },
       {
         "title": {
@@ -1149,6 +1615,131 @@
           ]
         }
       ]
+    },
+    {
+      "name": {
+        "en": "Sony BRAVIA Theatre"
+      },
+      "images": {
+        "large": "drivers/sony-bravia-theatre/assets/images/large.png",
+        "small": "drivers/sony-bravia-theatre/assets/images/small.png"
+      },
+      "class": "speaker",
+      "capabilities": [
+        "onoff",
+        "volume_up",
+        "volume_down",
+        "volume_mute",
+        "volume_set",
+        "sound_field",
+        "night_mode",
+        "drc",
+        "voice_enhancer",
+        "rear_level",
+        "bass_level",
+        "input_theatre"
+      ],
+      "discovery": "sony-theatre",
+      "pair": [
+        {
+          "id": "instructions",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "add_devices",
+            "back": "instructions"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "sony-bravia-theatre",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "General settings",
+            "de": "Allgemeine Einstellungen",
+            "nl": "Algemene instellingen"
+          },
+          "children": [
+            {
+              "id": "polling",
+              "type": "number",
+              "label": {
+                "en": "Device polling interval",
+                "de": "Abruf-Intervall",
+                "nl": "Apparaat polling interval"
+              },
+              "value": 10,
+              "min": 1,
+              "hint": {
+                "en": "Lowering this value improves automation responses when regular remote is used, but also increases load on your Homey.",
+                "de": "Das Verringern dieses Werts verbessert die Reaktionen bei Verwendung einer normalen Fernbedienung, erhöht aber auch die Auslastung deines Homeys.",
+                "nl": "Een lagere waarde zorgt voor een snellere terugkoppeling van de televisie wanneer de afstandbediening wordt gebruikt, maar is zwaarder voor de Homey om te verwerken."
+              }
+            },
+            {
+              "id": "polling_unit",
+              "type": "dropdown",
+              "label": {
+                "en": "Interval unit",
+                "de": "Intervall-Einheit",
+                "nl": "Interval eenheid"
+              },
+              "value": "sec",
+              "values": [
+                {
+                  "id": "min",
+                  "label": {
+                    "en": "Minutes",
+                    "de": "Minuten",
+                    "nl": "Minuten"
+                  }
+                },
+                {
+                  "id": "sec",
+                  "label": {
+                    "en": "Seconds",
+                    "de": "Sekunden",
+                    "nl": "Sekunden"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Theatre settings",
+            "de": "Theatre-Einstellungen",
+            "nl": "Theatre-instellingen"
+          },
+          "children": [
+            {
+              "id": "has_subwoofer",
+              "type": "checkbox",
+              "label": {
+                "en": "Has subwoofer",
+                "de": "Mit Subwoofer",
+                "nl": "Met subwoofer"
+              },
+              "value": false
+            }
+          ]
+        }
+      ]
     }
   ],
   "capabilities": {
@@ -1196,6 +1787,59 @@
           }
         }
       ]
+    },
+    "bass_level": {
+      "title": {
+        "en": "Bass level",
+        "de": "Basspegel",
+        "nl": "Basniveau"
+      },
+      "type": "number",
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": -10,
+      "max": 10,
+      "step": 1,
+      "icon": "/assets/capabilities/bass_level.svg"
+    },
+    "drc": {
+      "title": {
+        "en": "Dynamic range compression",
+        "de": "Dynamikbereichskompression",
+        "nl": "Dynamisch bereik compressie"
+      },
+      "type": "enum",
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "values": [
+        {
+          "id": "on",
+          "title": {
+            "en": "On",
+            "de": "Ein",
+            "nl": "Aan"
+          }
+        },
+        {
+          "id": "off",
+          "title": {
+            "en": "Off",
+            "de": "Aus",
+            "nl": "Uit"
+          }
+        },
+        {
+          "id": "auto",
+          "title": {
+            "en": "Auto",
+            "de": "Auto",
+            "nl": "Auto"
+          }
+        }
+      ],
+      "icon": "/assets/capabilities/drc.svg"
     },
     "input": {
       "type": "enum",
@@ -1254,6 +1898,51 @@
         }
       ]
     },
+    "input_theatre": {
+      "type": "enum",
+      "title": {
+        "en": "Input",
+        "de": "Eingang",
+        "nl": "Invoer"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "values": [
+        {
+          "id": "tv",
+          "title": "TV"
+        },
+        {
+          "id": "bluetooth",
+          "title": "Bluetooth"
+        },
+        {
+          "id": "hdmi1",
+          "title": "HDMI 1"
+        },
+        {
+          "id": "spotify",
+          "title": "Spotify"
+        },
+        {
+          "id": "airplay2",
+          "title": "AirPlay 2"
+        }
+      ]
+    },
+    "night_mode": {
+      "title": {
+        "en": "Night mode",
+        "de": "Nachtmodus",
+        "nl": "Nachtmodus"
+      },
+      "type": "boolean",
+      "getable": true,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "/assets/capabilities/night_mode.svg"
+    },
     "playing_content": {
       "type": "string",
       "title": {
@@ -1264,6 +1953,21 @@
       "getable": true,
       "setable": false,
       "uiComponent": null
+    },
+    "rear_level": {
+      "title": {
+        "en": "Rear level",
+        "de": "Hinterer Pegel",
+        "nl": "Achterniveau"
+      },
+      "type": "number",
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": -10,
+      "max": 10,
+      "step": 1,
+      "icon": "/assets/capabilities/rear_level.svg"
     },
     "screen_off": {
       "title": {
@@ -1276,6 +1980,54 @@
       "setable": true,
       "uiComponent": "button",
       "icon": "/assets/capabilities/screen_off.svg"
+    },
+    "sound_field": {
+      "title": {
+        "en": "Sound field",
+        "de": "Klangfeld",
+        "nl": "Geluidsveld"
+      },
+      "type": "boolean",
+      "getable": true,
+      "setable": true,
+      "uiComponent": "button",
+      "icon": "/assets/capabilities/sound_field.svg"
+    },
+    "voice_enhancer": {
+      "title": {
+        "en": "Voice enhancer",
+        "de": "Sprachverstärker",
+        "nl": "Spraakversterker"
+      },
+      "type": "number",
+      "getable": true,
+      "setable": true,
+      "uiComponent": "slider",
+      "min": -6,
+      "max": 6,
+      "step": 1,
+      "icon": "/assets/capabilities/voice_enhancer.svg"
+    }
+  },
+  "discovery": {
+    "sony-theatre": {
+      "type": "mdns-sd",
+      "mdns-sd": {
+        "name": "sonysmarthome",
+        "protocol": "tcp"
+      },
+      "id": "{{name}}",
+      "conditions": [
+        [
+          {
+            "field": "name",
+            "match": {
+              "type": "regex",
+              "value": "^BRAVIA Theatre.*"
+            }
+          }
+        ]
+      ]
     }
   }
 }

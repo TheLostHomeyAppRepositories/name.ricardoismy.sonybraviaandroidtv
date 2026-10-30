@@ -1,0 +1,15 @@
+{
+    "title": {
+      "en": "Voice enhancer",
+      "de": "Sprachverstärker",
+      "nl": "Spraakversterker"
+    },
+    "type": "number",
+    "getable": true,
+    "setable": true,
+    "uiComponent": "slider",
+    "min": -6,
+    "max": 6,
+    "step": 1,
+    "icon": "/assets/capabilities/voice_enhancer.svg"
+}

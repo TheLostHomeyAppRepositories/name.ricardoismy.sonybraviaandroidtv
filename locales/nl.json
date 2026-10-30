@@ -74,5 +74,16 @@
     "buttons": {
       "continue": "Doorgaan"
     }
+  },
+  "instructions_theatre": {
+    "titles": {
+      "header": "Je Sony BRAVIA Theatre instellen",
+      "page": "Instellen is heel eenvoudig"
+    },
+    "step_by_step": {
+      "intro": "Alle benodigde instellingen vind je in de <b>BRAVIA Connect-app</b> onder <b>Instellingen → Netwerkinstellingen</b> van je <b>BRAVIA Theatre</b>. Schakel daar de volgende optie in:",
+      "steps": "- Externe bediening: <b>Ingeschakeld</b>",
+      "outro": "Daarna kun je doorgaan met het instellen van je Sony BRAVIA Theatre."
+    }
   }
 }

@@ -1,0 +1,12 @@
+{
+    "title": {
+      "en": "Night mode",
+      "de": "Nachtmodus",
+      "nl": "Nachtmodus"
+    },
+    "type": "boolean",
+    "getable": true,
+    "setable": true,
+    "uiComponent": "button",
+    "icon": "/assets/capabilities/night_mode.svg"
+}

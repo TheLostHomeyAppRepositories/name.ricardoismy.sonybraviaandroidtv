@@ -1,0 +1,19 @@
+{
+    "title": {
+        "en": "Sound field off.",
+        "de": "Klangfeld aus.",
+        "nl": "Geluidsveld uit."
+    },
+    "titleFormatted": {
+        "en": "Sound field off.",
+        "de": "Klangfeld aus",
+        "nl": "Geluidsveld uit"
+    },
+    "args": [
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+        }
+    ]
+}

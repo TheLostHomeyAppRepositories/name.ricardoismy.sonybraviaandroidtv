@@ -122,5 +122,8 @@
   "2.2.3": {
     "en": "Pair adaptation for new TVs.",
     "de": "Pairing-Anpassungen für neue TVs."
+  },
+  "3.0.0": {
+    "en": "Added BRAVIA Theatre support."
   }
 }

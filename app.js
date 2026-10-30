@@ -242,6 +242,91 @@ class SonyBraviaAndroidTvApp extends Homey.App {
           });
         });
     
+        this._flowActionInputTheatreSelect = this.homey.flow.getActionCard('input_theatre_select');
+        this._flowActionInputTheatreSelect.registerRunListener(async (args, state) => {
+          try{
+            return await args.device.flowActionInputTheatreSelect(args, state);
+          }
+          catch(error){
+            this.error("Error executing flowAction 'input_theatre_select': "+  error.message);
+            throw new Error(error.message);
+          }
+        });
+        this._flowActionNightModeOn = this.homey.flow.getActionCard('night_mode_on');
+        this._flowActionNightModeOn.registerRunListener(async (args, state) => {
+          try{
+            return await args.device.flowActionNightModeOn(args, state);
+          }
+          catch(error){
+            this.error("Error executing flowAction 'night_mode_on': "+  error.message);
+            throw new Error(error.message);
+          }
+        });
+        this._flowActionNightModeOff = this.homey.flow.getActionCard('night_mode_off');
+        this._flowActionNightModeOff.registerRunListener(async (args, state) => {
+          try{
+            return await args.device.flowActionNightModeOff(args, state);
+          }
+          catch(error){
+            this.error("Error executing flowAction 'night_mode_off': "+  error.message);
+            throw new Error(error.message);
+          }
+        });
+        this._flowActionSoundFieldOn = this.homey.flow.getActionCard('sound_field_on');
+        this._flowActionSoundFieldOn.registerRunListener(async (args, state) => {
+          try{
+            return await args.device.flowActionSoundFieldOn(args, state);
+          }
+          catch(error){
+            this.error("Error executing flowAction 'sound_field_on': "+  error.message);
+            throw new Error(error.message);
+          }
+        });
+
+        this._flowActionSoundFieldOff = this.homey.flow.getActionCard('sound_field_off');
+        this._flowActionSoundFieldOff.registerRunListener(async (args, state) => {
+          try{
+            return await args.device.flowActionSoundFieldOff(args, state);
+          }
+          catch(error){
+            this.error("Error executing flowAction 'sound_field_off': "+  error.message);
+            throw new Error(error.message);
+          }
+        });
+
+        this._flowActionVoiceEnhancerLevel = this.homey.flow.getActionCard('voice_enhancer_level');
+        this._flowActionVoiceEnhancerLevel.registerRunListener(async (args, state) => {
+          try{
+            return await args.device.flowActionVoiceEnhancerLevel(args, state);
+          }
+          catch(error){
+            this.error("Error executing flowAction 'voice_enhancer_level': "+  error.message);
+            throw new Error(error.message);
+          }
+        });
+
+        this._flowActionBassLevel = this.homey.flow.getActionCard('bass_level');
+        this._flowActionBassLevel.registerRunListener(async (args, state) => {
+          try{
+            return await args.device.flowActionBassLevel(args, state);
+          }
+          catch(error){
+            this.error("Error executing flowAction 'bass_level': "+  error.message);
+            throw new Error(error.message);
+          }
+        });
+
+        this._flowActionSoundRearLevel = this.homey.flow.getActionCard('rear_level');
+        this._flowActionSoundRearLevel.registerRunListener(async (args, state) => {
+          try{
+            return await args.device.flowActionSoundRearLevel(args, state);
+          }
+          catch(error){
+            this.error("Error executing flowAction 'rear_level': "+  error.message);
+            throw new Error(error.message);
+          }
+        });
+
 
         // FLOW CONDITIONS ===============================================================================================
         this._flowConditionInput = this.homey.flow.getConditionCard('input').registerRunListener(async (args, state) => {
@@ -269,6 +354,9 @@ class SonyBraviaAndroidTvApp extends Homey.App {
           return (args.device.getCapabilityValue('screen_off') == args.output);
         })
 
+        this._flowConditionInputTheatre = this.homey.flow.getConditionCard('input_theatre').registerRunListener(async (args, state) => {
+          return (args.device.getCapabilityValue('input_theatre') == args.input_theatre);
+        })
     }
 
     async _wakeOnLanAction(args, state){

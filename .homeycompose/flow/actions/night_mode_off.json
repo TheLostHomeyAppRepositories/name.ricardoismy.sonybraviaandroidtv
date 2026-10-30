@@ -1,0 +1,19 @@
+{
+    "title": {
+        "en": "Night mode off.",
+        "de": "Nachtmodus aus.",
+        "nl": "Nachtmodus uit."
+    },
+    "titleFormatted": {
+        "en": "Night mode off.",
+        "de": "Nachtmodus aus",
+        "nl": "Nachtmodus uit"
+    },
+    "args": [
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "title": {
+        "en": "Input !{{is|isn't}}",
+        "de": "Eingang !{{ist|ist nicht}}",
+        "nl": "Invoer !{{is|is niet}}"
+    },
+    "titleFormatted": {
+        "en": "Input !{{is|isn't}} [[input_theatre]]",
+        "de": "Eingang !{{ist|ist nicht}} [[input_theatre]]",
+        "nl": "Invoer !{{is|is niet}} [[input_theatre]]"
+    },
+    "args": [
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+        },
+        {
+            "name": "input_theatre",
+            "type": "dropdown",
+            "title": { 
+                "en": "Input",
+                "de": "Eingang",
+                "nl": "Invoer"
+            },
+            "placeholder": { 
+                "en": "Select the input",
+                "de": "Wähle den Eingang",
+                "nl": "Selecteer de invoer"
+            },
+            "values": [
+                {
+                "id": "tv",
+                "title": "TV"
+                },
+                {
+                "id": "bluetooth",
+                "title": "Bluetooth"
+                },
+                {
+                "id": "hdmi1",
+                "title": "HDMI 1"
+                },
+                {
+                "id": "spotify",
+                "title": "Spotify"
+                },
+                {
+                "id": "airplay2",
+                "title": "AirPlay 2"
+                }
+            ]
+        }
+    ]
+}

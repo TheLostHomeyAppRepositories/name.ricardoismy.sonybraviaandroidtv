@@ -1,0 +1,15 @@
+{
+    "title": {
+      "en": "Bass level",
+      "de": "Basspegel",
+      "nl": "Basniveau"
+    },
+    "type": "number",
+    "getable": true,
+    "setable": true,
+    "uiComponent": "slider",
+    "min": -10,
+    "max": 10,
+    "step": 1,
+    "icon": "/assets/capabilities/bass_level.svg"
+}

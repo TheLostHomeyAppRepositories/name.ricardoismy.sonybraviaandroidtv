@@ -1,0 +1,76 @@
+[
+    {
+      "type": "group",
+      "label": {
+        "en": "General settings",
+        "de": "Allgemeine Einstellungen",
+        "nl": "Algemene instellingen"
+      },
+      "children": [
+        {
+          "id": "polling",
+          "type": "number",
+          "label": {
+            "en": "Device polling interval",
+            "de": "Abruf-Intervall",
+            "nl": "Apparaat polling interval"
+          },
+          "value": 10,
+          "min": 1,
+          "hint": {
+            "en": "Lowering this value improves automation responses when regular remote is used, but also increases load on your Homey.",
+            "de": "Das Verringern dieses Werts verbessert die Reaktionen bei Verwendung einer normalen Fernbedienung, erhöht aber auch die Auslastung deines Homeys.",
+            "nl": "Een lagere waarde zorgt voor een snellere terugkoppeling van de televisie wanneer de afstandbediening wordt gebruikt, maar is zwaarder voor de Homey om te verwerken."
+          }
+        },
+        {
+            "id": "polling_unit",
+            "type": "dropdown",
+            "label": { 
+                "en": "Interval unit",
+                "de": "Intervall-Einheit",
+                "nl": "Interval eenheid"
+            },
+            "value": "sec",
+            "values":[
+                {
+                    "id": "min",
+                    "label":{
+                        "en": "Minutes",
+                        "de": "Minuten",
+                        "nl": "Minuten"
+                    }
+                },
+                {
+                    "id": "sec",
+                    "label":{
+                        "en": "Seconds",
+                        "de": "Sekunden",
+                        "nl": "Sekunden"
+                    }
+                }
+            ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+        "en": "Theatre settings",
+        "de": "Theatre-Einstellungen",
+        "nl": "Theatre-instellingen"
+      },
+      "children": [
+        {
+          "id": "has_subwoofer",
+          "type": "checkbox",
+          "label": {
+            "en": "Has subwoofer",
+            "de": "Mit Subwoofer",
+            "nl": "Met subwoofer"
+          },
+          "value": false
+        }
+      ]
+    }
+  ]

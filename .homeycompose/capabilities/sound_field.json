@@ -1,0 +1,12 @@
+{
+    "title": {
+      "en": "Sound field",
+      "de": "Klangfeld",
+      "nl": "Geluidsveld"
+    },
+    "type": "boolean",
+    "getable": true,
+    "setable": true,
+    "uiComponent": "button",
+    "icon": "/assets/capabilities/sound_field.svg"
+}

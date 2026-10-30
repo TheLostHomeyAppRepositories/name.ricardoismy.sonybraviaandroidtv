@@ -1,0 +1,50 @@
+{
+  "name": {
+    "en": "Sony BRAVIA Theatre"
+  },
+  "images": {
+    "large": "drivers/sony-bravia-theatre/assets/images/large.png",
+    "small": "drivers/sony-bravia-theatre/assets/images/small.png"
+  },
+  "class": "speaker",
+  "capabilities": [
+    "onoff",
+    "volume_up",
+    "volume_down",
+    "volume_mute",
+    "volume_set",
+
+    "sound_field",
+    "night_mode",
+
+    "drc",
+    "voice_enhancer",
+    "rear_level",
+    "bass_level",
+    "input_theatre"
+  ],
+  "discovery": "sony-theatre",
+  "pair": [
+    {
+      "id": "instructions",
+      "navigation": {
+        "next": "list_devices"
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "options": {
+        "singular": true
+        },
+      "navigation": {
+        "next": "add_devices",
+        "back": "instructions"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+    "title": {
+        "en": "Set rear level.",
+        "de": "Rear-Pegel einstellen.",
+        "nl": "Achterniveau instellen."
+    },
+    "titleFormatted": {
+        "en": "Set rear level to [[level]].",
+        "de": "Rear-Pegel auf [[level]] einstellen.",
+        "nl": "Achterniveau instellen op [[level]]."
+    },
+    "args": [
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+        },
+        {
+            "name": "level",
+            "type": "range",
+            "min": -10,
+            "max": 10,
+            "step": 1,
+            "labelDecimals": 0
+        }
+    ]
+}

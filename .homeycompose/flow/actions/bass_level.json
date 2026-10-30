@@ -1,0 +1,27 @@
+{
+    "title": {
+        "en": "Set bass level.",
+        "de": "Basspegel einstellen.",
+        "nl": "Basniveau instellen."
+    },
+    "titleFormatted": {
+        "en": "Set bass level to [[level]].",
+        "de": "Basspegel auf [[level]] einstellen.",
+        "nl": "Basniveau instellen op [[level]]."
+    },
+    "args": [
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+        },
+        {
+            "name": "level",
+            "type": "range",
+            "min": -10,
+            "max": 10,
+            "step": 1,
+            "labelDecimals": 0
+        }
+    ]
+}

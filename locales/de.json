@@ -74,5 +74,16 @@
     "buttons": {
       "continue": "Fortsetzen"
     }
+  },
+  "instructions_theatre": {
+    "titles": {
+      "header": "Dein Sony BRAVIA Theatre einrichten",
+      "page": "Die Einrichtung ist ganz einfach"
+    },
+    "step_by_step": {
+      "intro": "Alle erforderlichen Einstellungen findest du in der <b>BRAVIA Connect App</b> unter <b>Einstellungen → Netzwerkeinstellungen</b> deines <b>BRAVIA Theatre</b>. Aktiviere dort folgende Option:",
+      "steps": "- Externe Steuerung: <b>Aktiviert</b>",
+      "outro": "Anschließend kannst du mit der Einrichtung deines Sony BRAVIA Theatre fortfahren."
+    }
   }
 }

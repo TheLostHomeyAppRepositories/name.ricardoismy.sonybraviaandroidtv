@@ -1,0 +1,12 @@
+{
+    "title": {
+        "en": "Sound field enabled",
+        "de": "Klangfeld aktiviert",
+        "nl": "Geluidsveld ingeschakeld"
+    },
+    "args": [{
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=sony-bravia-theatre"
+    }]
+}

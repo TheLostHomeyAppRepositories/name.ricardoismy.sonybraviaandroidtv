@@ -74,5 +74,16 @@
     "buttons": {
       "continue": "Continue"
     }
+  },
+  "instructions_theatre": {
+    "titles": {
+      "header": "Setting up your Sony BRAVIA Theatre",
+      "page": "Setup is easy"
+    },
+    "step_by_step": {
+      "intro": "You can find all required settings in the <b>BRAVIA Connect app</b> under <b>Settings → Network Settings</b> for your <b>BRAVIA Theatre</b>. Enable the following option:",
+      "steps": "- External Control: <b>Enabled</b>",
+      "outro": "You can then continue setting up your Sony BRAVIA Theatre."
+    }
   }
 }

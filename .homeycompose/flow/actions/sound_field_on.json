@@ -1,0 +1,19 @@
+{
+    "title": {
+        "en": "Sound field on.",
+        "de": "Klangfeld an.",
+        "nl": "Geluidsveld aan."
+    },
+    "titleFormatted": {
+        "en": "Sound field on.",
+        "de": "Klangfeld an",
+        "nl": "Geluidsveld aan"
+    },
+    "args": [
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=sony-bravia-theatre"
+        }
+    ]
+}

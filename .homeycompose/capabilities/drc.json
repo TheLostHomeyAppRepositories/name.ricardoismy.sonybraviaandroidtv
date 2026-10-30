@@ -1,0 +1,38 @@
+{
+    "title": {
+      "en": "Dynamic range compression",
+      "de": "Dynamikbereichskompression",
+      "nl": "Dynamisch bereik compressie"
+    },
+    "type": "enum",
+    "getable": true,
+    "setable": true,
+    "uiComponent": "picker",
+    "values": [
+      {
+        "id": "on",
+        "title": {
+          "en": "On",
+          "de": "Ein",
+          "nl": "Aan"
+        }
+      },
+      {
+        "id": "off",
+        "title": {
+          "en": "Off",
+          "de": "Aus",
+          "nl": "Uit"
+        }
+      },
+      {
+        "id": "auto",
+        "title": {
+          "en": "Auto",
+          "de": "Auto",
+          "nl": "Auto"
+        }
+      }
+    ],
+    "icon": "/assets/capabilities/drc.svg"
+}

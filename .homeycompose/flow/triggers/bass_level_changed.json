@@ -1,0 +1,24 @@
+{
+    "title": {
+        "en": "Bass level changed",
+        "de": "Basspegel geändert",
+        "nl": "Basniveau veranderd"
+    },
+    "tokens": [
+        {
+            "name": "bass_level",
+            "type": "number",
+            "title": {
+                "en": "Bass level",
+                "de": "Basspegel",
+                "nl": "Basniveau"
+            },
+            "example": 5
+        }
+    ],
+    "args": [{
+        "name": "device",
+        "type": "device",
+        "filter": "driver_id=sony-bravia-theatre"
+    }]
+}

@@ -1,0 +1,33 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Input",
+    "de": "Eingang",
+    "nl": "Invoer"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "tv",
+      "title": "TV"
+    },
+    {
+      "id": "bluetooth",
+      "title": "Bluetooth"
+    },
+    {
+      "id": "hdmi1",
+      "title": "HDMI 1"
+    },
+    {
+      "id": "spotify",
+      "title": "Spotify"
+    },
+    {
+      "id": "airplay2",
+      "title": "AirPlay 2"
+    }
+  ]
+}

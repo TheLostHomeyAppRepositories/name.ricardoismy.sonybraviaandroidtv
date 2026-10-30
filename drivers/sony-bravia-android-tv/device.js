@@ -36,14 +36,14 @@ class SonyBraviaAndroidTvDevice extends Homey.Device {
     this._clearIntervals();
 
     this.data = this._generateDeviceObject();
-    this.log(`${this.this.getName()} unInit().`);
+    this.log(`${this.getName()} unInit().`);
   }
 
   onDeleted() {
     this._clearIntervals();
 
     this.data = this._generateDeviceObject();
-    this.log(`${this.this.getName()} deleting.`);
+    this.log(`${this.getName()} deleting.`);
   }
 
     /**
